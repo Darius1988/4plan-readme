@@ -73,7 +73,8 @@ Host: `https://api4plan.burbulis.lt`
   "id": 1,
   "name": "John Doe",
   "surname": "Doe",
-  "email": "test@test.com"
+  "email": "test@test.com",
+  "licences": []
 }
 ```
 
@@ -104,7 +105,8 @@ Host: `https://api4plan.burbulis.lt`
   "id": 1,
   "name": "John Doe",
   "surname": "Doe",
-  "email": "test@test.com"
+  "email": "test@test.com",
+  "licences": []
 }
 ```
 
@@ -134,7 +136,8 @@ Host: `https://api4plan.burbulis.lt`
   "id": 1,
   "name": "John Doe",
   "surname": "Doe",
-  "email": "test@test.com"
+  "email": "test@test.com",
+  "licences": []
 }
 ```
 
@@ -212,17 +215,18 @@ Host: `https://api4plan.burbulis.lt`
   "id": 1,
   "name": "John Doe",
   "surname": "Doe",
-  "email": "test@test.com"
+  "email": "test@test.com",
+  "licences": []
 }
 ```
 
 ### Get user payments
 
-- **REQUEST**: `GET` to `/api/user/payments`
+- **REQUEST**: `GET` to `/api/user/licenses`
 
 ### Post user payments
 
-- **REQUEST**: `POST` to `/api/user/payments`
+- **REQUEST**: `POST` to `/api/user/licenses`
 - **DATA**:
 
 ```json
