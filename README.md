@@ -220,11 +220,11 @@ Host: `https://api4plan.burbulis.lt`
 }
 ```
 
-### Get user payments
+### Get user licenses
 
 - **REQUEST**: `GET` to `/api/user/licenses`
 
-### Post user payments
+### Post user license
 
 - **REQUEST**: `POST` to `/api/user/licenses`
 - **DATA**:
@@ -233,6 +233,15 @@ Host: `https://api4plan.burbulis.lt`
 {
   "type": "apple",
   "data": "{{encodedData}}"
+}
+```
+
+License structure:
+```json
+{
+  "subId": "xxxxxx",
+  "productId": "productId (mponghtl memebrship)"
+  "expiresAt": "Date of expireation"
 }
 ```
 
