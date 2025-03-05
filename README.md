@@ -33,7 +33,7 @@ Host: `https://api4plan.burbulis.lt`
 }
 ```
 
-`encoded_data` - {name, surname, email, password} encoded with `encodeDataWithSecretToken(encoded_data, secretKey)`
+`encoded_data` - {name, surname, email, password} encoded with `encodeDataWithSecretToken(encoded_data, secretKey)`  
 `secretKey` - `key` from `/api/auth/token` request
 
 - **RESPONSE**:
