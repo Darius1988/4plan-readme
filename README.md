@@ -1,3 +1,12 @@
+# Test DB credentials.
+```
+mysql_user=doadmin
+mysql_password=AVNS_7f73jgqvF3cugMtRw2x
+mysql_database=defaultdb
+mysql_host=private-db-mysql-4plan-do-user-12628126-0.e.db.ondigitalocean.com
+mysql_port=25060
+```
+
 # API Endpoints Documentation
 Host: `https://api4plan.burbulis.lt`
 
