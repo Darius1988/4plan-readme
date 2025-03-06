@@ -1,5 +1,17 @@
 # API Endpoints Documentation
-Host: `https://api4plan.burbulis.lt`
+
+All requests requires `nonce` header. Nonce is a random string of characters.
+All response from server are wrapper up in a response object with following format:
+
+```json
+{
+  "signature": "signedHashOfResponse....",
+  "payload": {
+    "nonce": "randomStringOfCharacters....",
+    "content": {responseData}
+  }
+}
+```
 
 ## Authentication
 
@@ -32,9 +44,6 @@ Host: `https://api4plan.burbulis.lt`
   }
 }
 ```
-
-`encoded_data` - {name, surname, email, password} encoded with `encodeDataWithSecretToken(encoded_data, secretKey)`  
-`secretKey` - `key` from `/api/auth/token` request
 
 - **RESPONSE**:
 
@@ -73,8 +82,7 @@ Host: `https://api4plan.burbulis.lt`
   "id": 1,
   "name": "John Doe",
   "surname": "Doe",
-  "email": "test@test.com",
-  "licences": []
+  "email": "test@test.com"
 }
 ```
 
@@ -85,6 +93,7 @@ Host: `https://api4plan.burbulis.lt`
 
 ```json
 {
+  "type": "email",
   "email": "test@test.com",
   "password": "Password.123"
 }
@@ -105,18 +114,18 @@ Host: `https://api4plan.burbulis.lt`
   "id": 1,
   "name": "John Doe",
   "surname": "Doe",
-  "email": "test@test.com",
-  "licences": []
+  "email": "test@test.com"
 }
 ```
 
 ### Apple login
 
-- **REQUEST**: `POST` to `/api/auth/apple-login`
+- **REQUEST**: `POST` to `/api/auth/login`
 - **DATA**:
 
 ```json
 {
+  "type": "apple",
   "accessToken": "1234567890"
 }
 ```
@@ -136,8 +145,7 @@ Host: `https://api4plan.burbulis.lt`
   "id": 1,
   "name": "John Doe",
   "surname": "Doe",
-  "email": "test@test.com",
-  "licences": []
+  "email": "test@test.com"
 }
 ```
 
@@ -215,33 +223,23 @@ Host: `https://api4plan.burbulis.lt`
   "id": 1,
   "name": "John Doe",
   "surname": "Doe",
-  "email": "test@test.com",
-  "licences": []
+  "email": "test@test.com"
 }
 ```
 
-### Get user licenses
+### Get user payments
 
-- **REQUEST**: `GET` to `/api/user/licenses`
+- **REQUEST**: `GET` to `/api/user/payments`
 
-### Post user license
+### Post user payments
 
-- **REQUEST**: `POST` to `/api/user/licenses`
+- **REQUEST**: `POST` to `/api/user/payments`
 - **DATA**:
 
 ```json
 {
   "type": "apple",
   "data": "{{encodedData}}"
-}
-```
-
-License structure:
-```json
-{
-  "subId": "xxxxxx",
-  "productId": "productId (mponghtl memebrship)"
-  "expiresAt": "Date of expireation"
 }
 ```
 
