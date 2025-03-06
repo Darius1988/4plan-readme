@@ -1,6 +1,6 @@
 # API Endpoints Documentation
 
-All requests requires `nonce` header. Nonce is a random string of characters.
+All requests requires `nonce` header. Nonce is a random string of characters.  
 All response from server are wrapper up in a response object with following format:
 
 ```json
