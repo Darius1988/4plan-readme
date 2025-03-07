@@ -17,7 +17,7 @@ All response from server are wrapper up in a response object with following form
 
 ### Get secret key for future registration request
 
-- **REQUEST**: `POST` to `/api/auth/token`
+- **REQUEST**: `POST` to `/api/auth/register/token`
 - **RESPONSE**:
 
 ```json
