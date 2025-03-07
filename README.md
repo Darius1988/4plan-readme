@@ -227,13 +227,13 @@ All response from server are wrapper up in a response object with following form
 }
 ```
 
-### Get user payments
+### Get user licences
 
-- **REQUEST**: `GET` to `/api/user/payments`
+- **REQUEST**: `GET` to `/api/user/licenses`
 
-### Post user payments
+### Post user licenses
 
-- **REQUEST**: `POST` to `/api/user/payments`
+- **REQUEST**: `POST` to `/api/user/licenses`
 - **DATA**:
 
 ```json
