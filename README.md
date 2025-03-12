@@ -151,7 +151,7 @@ All response from server are wrapper up in a response object with following form
 
 ### Password reminder
 
-- **REQUEST**: `POST` to `/api/auth/password-reminder`
+- **REQUEST**: `POST` to `/api/auth/password/reminder`
 - **DATA**:
 
 ```json
@@ -171,7 +171,7 @@ All response from server are wrapper up in a response object with following form
 
 ### Validate password reminder
 
-- **REQUEST**: `POST` to `/api/auth/password-reminder/validate`
+- **REQUEST**: `POST` to `/api/auth/password/reminder/validate`
 - **DATA**:
 
 ```json
@@ -192,7 +192,7 @@ All response from server are wrapper up in a response object with following form
 
 ### Reset password
 
-- **REQUEST**: `POST` to `/api/auth/password-reset`
+- **REQUEST**: `POST` to `/api/auth/password/reminder/reset`
 - **DATA**:
 
 ```json
