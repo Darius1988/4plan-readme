@@ -197,8 +197,9 @@ All response from server are wrapper up in a response object with following form
 
 ```json
 {
-  "token": "123456",
   "email": "test@test.com",
+  "code": "123456",
+  "restoreToken": "restoreTokenGotInValidateRequest.",
   "password": "Password.123"
 }
 ```
